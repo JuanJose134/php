@@ -1,10 +1,35 @@
-/**Servidor = localhost/archivo
+<?php
+/**Servidor = localhost
  * Usuario root
  * Pasword:
- * DB = ejemplo
+ * Nombre de la base de datos= ejemplo
  */
 $conexion =new mysqli("localhost","root","","ejemplo") ;
-var_dump($conexion);
+//var_dump($conexion);
+$consulta1 = $conexion->query(" SELECT * FROM usuarios ");
+$consulta2 = $conexion->query(" SELECT * FROM usuarios WHERE Documento = 3029819302 ");
+//->fetch_object() especifica que el valor consultado si o si debe existir en la base de datos y se usa cuando registra y muestra esa informacion
+//->num_rows Se usa para consultar y registrar una informacion pero no mostrarla en pantalla y muestra una alerta y retorna ala pagina anterior
+if($consulta2->num_rows > 0)
+{
+    echo'Existe';
+}
+else
+{
+    echo'No existe';
+}
+$insert = $conexion->query("INSERT INTO usuarios VALUES(null,3029819302,'Alexander',3057019283)");
+//var_dump($insert);
+$registro =$consulta1->fetch_object();
+//var_dump($registro);
+echo $registro->Documento."<br>";
+echo $registro->Nombres."<br>";
+echo $registro->Telefono."<br>";
+$total = 0;
+/*while($total > )
+{
+
+}*/
 -----------------
 <!DOCTYPE html>
 <html lang="en">
