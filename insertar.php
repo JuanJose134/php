@@ -12,5 +12,4 @@ $conexion = $conexion->query("INSERT INTO users VALUES
     ,'$_POST[mail]'
     ,'$_POST[phone]'
     ,'$_POST[age]'
-)
-");
+)");
