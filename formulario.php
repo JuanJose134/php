@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
 </head>
 <body>
     <h1>REGISTRARSE</h1>
-    <form action="insertar.php" method="post">
+    <form action="insertar.php" method="Post">
         <label for="">Ingrese el primer Nombre</label><br>
         <input type="text" name="first_name" require><br>
 

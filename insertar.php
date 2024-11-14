@@ -1,8 +1,7 @@
 <?php
 include "conexion.php";
-$conexion = $conexion->query("INSERT INTO users VALUES 
-(
-    null
+$sql ="INSERT INTO users VALUES 
+(null
     ,'$_POST[first_name]'
     ,'$_POST[second_name]'
     ,'$_POST[first_surname]'
@@ -12,4 +11,5 @@ $conexion = $conexion->query("INSERT INTO users VALUES
     ,'$_POST[mail]'
     ,'$_POST[phone]'
     ,'$_POST[age]'
-)");
+    )";
+    $conexion->query($sql ) or die($conexion);
