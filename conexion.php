@@ -5,4 +5,11 @@
  * Nombre de la base de datos= ejemplo
  */
 $conexion =new mysqli("localhost","root","","base_de_datos");
-//var_dump($conexion);
+/*if(¡$conexion)
+{
+echo "la conexion fallo";
+}
+else
+{
+echo "la conexion fue exitosa";
+}*/

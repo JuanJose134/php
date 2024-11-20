@@ -13,16 +13,16 @@
         <input type="text" name="first_name" require><br>
 
         <label for="">Ingrese el segundo Nombre</label><br>
-        <input type="text" name="second_name" require><br>
+        <input type="text" name="middle_name" require><br>
 
         <label for="">Ingrese el primer Apellido</label><br>
-        <input type="text" name="first_surname" require><br>
+        <input type="text" name="first_lastname" require><br>
 
         <label for="">Ingrese el segundo Apellido</label><br>
-        <input type="text" name="secondlastname" require><br>
+        <input type="text" name="second_lastname" require><br>
 
         <label for="">Ingrese el Documento</label><br>
-        <input type="number" name="Documento" require><br>
+        <input type="number" name="document" require><br>
 
         <label for="">Ingrese su password</label><br>
         <input type="PASSWORD" name="password" require><br>

@@ -1,18 +1,37 @@
-<?php
+<?php  
 include "conexion.php";
-$select_users = $conexion ->query("SELECT * FROM users");
-echo "<table border ='2'>";
-echo "<thead>";
-echo "<th>Primer nombre</th> ";
-echo "<th>Documento</th> ";
-echo "</thead>";
-echo "<tbody>";
-while($user = $select_users->fetch_object())
-{
-    echo "<tr>";
-    echo "<td>".$user->first_name."</td>";
-    echo "<td>".$user->document."</td>";
-    echo "</tr>";
-}
-echo "</tbody>";
-echo "</table>";
+$consultas = $conexion->query("SELECT * FROM users");
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>REGISTRARSE</h3> 
+    <table border="2">
+            <thead>
+            <th>Nombres</th>
+            <th>Correos</th>
+            <th>Eliminar</th>
+            <th>Actualizar</th>
+            </thead>
+            <tbody>
+                <?php while($user = $consultas->fetch_object()):?>
+                <tr>
+                    <td><?=$user->first_name ?></td>
+                    <td><?=$user->mail ?></td>
+                    <td><form action="abm.php" method="post">
+                        <input type="hidden" value="<?=$user->Id?>" name="id">
+                        <button type="submit">Eliminar</button>
+                    </form></td>
+                    <td><button>ver</button></td>
+                </tr>
+                <?php endwhile;?>
+            </tbody>
+    </table>
+</body>
+</html>
