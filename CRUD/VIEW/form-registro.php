@@ -10,8 +10,8 @@
 
     <h1>Registrar Usuario</h1>
 
-    <a href="listar.php">Lista de usuarios</a>
-    <form action="../MODELO/crud.php" method="post">
+    <a href="tabla.php">Lista de usuarios</a>
+    <form action="../MODELO/insertar.php" method="post">
 
         <label for="">Nombres</label>
         <input type="text" name="names">

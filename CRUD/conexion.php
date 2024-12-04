@@ -1,3 +1,3 @@
 <?php
 
-$conexion = new mysqli('localhost', 'root', '', 'example');
+$conexion = new mysqli('localhost', 'root', '', 'base_de_datos');

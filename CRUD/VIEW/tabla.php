@@ -35,13 +35,13 @@ $consulta = $conexion->query("SELECT * FROM users");
                     <td> <?=$user->phone;?> </td>
                     <td> <?=$user->email;?> </td>
                     <td>
-                        <form action="editar.php" method="get">
+                        <form action="form-editar.php" method="get">
                             <input type="hidden" name="user_id" id="id" value="<?=$user->id?>">
                             <button type="submit">Editar</button>
                         </form>
                     </td>
                     <td>
-                    <form action="../MODELO/eliminar-user.php" method="get">
+                    <form action="../MODELO/delete.php" method="get">
                             <input type="hidden" name="user_id" id="id" value="<?=$user->id?>">
                             <button type="submit">Eliminar</button>
                         </form>

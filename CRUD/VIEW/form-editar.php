@@ -12,7 +12,7 @@ $user = $conexion->query("SELECT * FROM users WHERE id=$_REQUEST[user_id] ")->fe
 </head>
 <body>
     <h1>Editar Usuario</h1>
-    <a href="listar.php">Regresar</a>
+    <a href="tabla.php">Regresar</a>
 
     <form action="../MODELO/update.php" method="post">
         <label for="name">Nombres</label>
