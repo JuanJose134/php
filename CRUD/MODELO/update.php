@@ -8,6 +8,10 @@ email = '$_POST[email]'
 
 WHERE id = '$_POST[id]'
 ");
-if($insert){
+if($conexion){
     header("location:../VIEW/tabla.php");
+}
+else
+{
+    echo"hubo un error";
 }

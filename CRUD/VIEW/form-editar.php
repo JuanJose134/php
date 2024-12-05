@@ -15,20 +15,21 @@ $user = $conexion->query("SELECT * FROM users WHERE id=$_REQUEST[user_id] ")->fe
     <a href="tabla.php">Regresar</a>
 
     <form action="../MODELO/update.php" method="post">
-        <label for="name">Nombres</label>
+        <label for="">Nombres</label>
         <input type="text" name="names" id="name" value="<?=$user->names?>">
-
-        <label for="lastname">Apellidos</label>
+        <input type="hidden" name="id" value="<?= $user->id?>">
+        
+        <label for="">Apellidos</label>
         <input type="text" name="lastnames" id="lastname" value="<?=$user->lastnames?>" >
         
-        <label for="document">Documento</label>
-        <input type="text" name="document" id="document">
+        <label for="">Documento</label>
+        <input type="text" name="document" id="document" value="<?=$user->document?>">
 
-        <label for="phone">Telefono</label>
-        <input type="text" name="phone" id="phone">
+        <label for="">Telefono</label>
+        <input type="text" name="phone" id="phone" value="<?=$user->phone?>">
 
-        <label for="email">Correo</label>
-        <input type="email" name="email" id="imail">
+        <label for="">Correo</label>
+        <input type="email" name="email" id="imail" value="<?=$user->email?>">
 
         <button type="submit">Actualizar</button>
     </form>

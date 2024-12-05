@@ -20,13 +20,13 @@
         <input type="text" name="lastnames">
 
         <label for="document">Documento</label>
-        <input type="text" name="document" id="document">
+        <input type="text" name="document">
 
         <label for="phone">Telefono</label>
-        <input type="text" name="phone" id="phone">
+        <input type="text" name="phone" >
 
         <label for="email">Email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" >
 
         <button type="submit">Registrar</button>
 
