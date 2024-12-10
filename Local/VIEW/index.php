@@ -1,3 +1,7 @@
+<?php include "../CONFIG/conexion.php"
+$consultas = $conexin ->query("SELECT * FROM products");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +21,16 @@
             <th>Editar</th>
             <th>Elimianr</th>
             <tbody>
-
+                <?php while($user = $consultas->fecth_object()):  ?>
+                    <tr>
+                        <td><?=$user-> ?></td> 
+                        <td><?=$user-> ?></td> 
+                        <td><?=$user-> ?></td> 
+                        <td><?=$user-> ?></td> 
+                        <td><?=$user-> ?></td> 
+                        <td><?=$user-> ?></td> 
+                        <td><?=$user-> ?></td> 
+                    </tr>
             </tbody>
         </thead>
     </table>
