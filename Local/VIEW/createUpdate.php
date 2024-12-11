@@ -20,6 +20,8 @@ $product = $conexion->query("SELECT * FROM products WHERE id = '$_GET[product_id
         <input type="text" name ="description" value="<?=$product->description?>"><br>
         <label for="">Precio del Producto</label><br>
         <input type="text" name ="price" value="<?=$product->price?>"><br>
+        <label for="">El estado del producto es :</label>
+        <input type="text" name ="state" value="<?=$product->state?>"><br>
         <button type="submit">Update</button>
     </form>
 </body>

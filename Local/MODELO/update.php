@@ -3,7 +3,8 @@ include "../CONFIG/db.php";
 $conexion->query("UPDATE products SET
 product = '$_POST[product]',
 description ='$_POST[description]',
-price = '$_POST[price]'
+price = '$_POST[price]',
+state = '$_POST[state]'
 
 WHERE id = '$_POST[id]'
 ");

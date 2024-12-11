@@ -10,7 +10,7 @@ null
 ,'$precio'
 ,null
 )");
-if($insert)
+if($conexion)
 {
     header("location:../VIEW/index.php");
 }
