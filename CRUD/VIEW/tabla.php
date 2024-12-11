@@ -1,5 +1,5 @@
 <?php
-include"../conexion.php";
+include "../conexion.php";
 $consulta = $conexion->query("SELECT * FROM users");
 ?>
 <!DOCTYPE html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Formulario de Registro</h5>
     <form action="../MODELO/save.php" method="post">
         <label for="">Nombre del producto</label><br>
         <input type="text" name="product"><br>

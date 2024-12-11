@@ -1,3 +1,2 @@
 <?php
-$conexion = new mysqli('localhost','root','','almacen');
-var_dump($conexion);
+$conexion = new mysqli('localhost','root','','tienda_online');

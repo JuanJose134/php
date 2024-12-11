@@ -1,7 +1,7 @@
-<?php include "../CONFIG/conexion.php"
-$consultas = $conexin ->query("SELECT * FROM products");
+<?php 
+include "../CONFIG/db.php";
+$listado_productos = $conexion->query("SELECT * FROM products");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,16 +21,16 @@ $consultas = $conexin ->query("SELECT * FROM products");
             <th>Editar</th>
             <th>Elimianr</th>
             <tbody>
-                <?php while($user = $consultas->fecth_object()):  ?>
+                <?php foreach($listado_productos as $product):?>
                     <tr>
-                        <td><?=$user-> ?></td> 
-                        <td><?=$user-> ?></td> 
-                        <td><?=$user-> ?></td> 
-                        <td><?=$user-> ?></td> 
-                        <td><?=$user-> ?></td> 
-                        <td><?=$user-> ?></td> 
-                        <td><?=$user-> ?></td> 
+                        <td><?=$product['product'] ?></td> 
+                        <td><?=$product['price'] ?></td> 
+                        <td><?=$product['state'] ?></td> 
+                        <td><a href="show.php?product_id=<?=$product['id']?>">VER</a></td> 
+                        <td><a href=""></a></td> 
+                        <td><a href=""></a></td> 
                     </tr>
+                    <?php endforeach;?>
             </tbody>
         </thead>
     </table>
