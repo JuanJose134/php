@@ -27,8 +27,8 @@ $listado_productos = $conexion->query("SELECT * FROM products");
                         <td><?=$product['price'] ?></td> 
                         <td><?=$product['state'] ?></td> 
                         <td><a href="show.php?product_id=<?=$product['id']?>">VER</a></td> 
-                        <td><a href=""></a></td> 
-                        <td><a href=""></a></td> 
+                        <td><a href="createUpdate.php?product_id=<?=$product['id']?>">Editar</a></td> </td> 
+                        <td><a href="../MODELO/delete.php?product_id=<?=$product['id']?>">VER</a></td> 
                     </tr>
                     <?php endforeach;?>
             </tbody>

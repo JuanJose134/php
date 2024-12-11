@@ -1,6 +1,6 @@
 <?php
-include "../CONFIG/conexion.php";
-$dato = $conexion->query("SELECT * FROM products WHERE id = $_POST[id]");
+include "../CONFIG/db.php";
+$product = $conexion->query("SELECT * FROM products WHERE id = '$_GET[product_id]'")->fetch_object();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,12 +11,16 @@ $dato = $conexion->query("SELECT * FROM products WHERE id = $_POST[id]");
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <input type="hidden" name="id" value="<?=$dato->id ?>">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
+    <h2>Actualizar</h2>
+    <form action="../MODELO/update.php" method="post">
+        <input type="hidden" name="id" value="<?=$product->id?>"><br>
+        <label for="">Nombre del Producto</label><br>
+        <input type="text" name ="product" value="<?=$product->product?>"><br>
+        <label for="">Descripcion del producto</label><br>
+        <input type="text" name ="description" value="<?=$product->description?>"><br>
+        <label for="">Precio del Producto</label><br>
+        <input type="text" name ="price" value="<?=$product->price?>"><br>
+        <button type="submit">Update</button>
     </form>
 </body>
 </html>
