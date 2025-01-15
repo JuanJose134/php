@@ -1,6 +1,6 @@
 <?php
 include "db/conexion.php";
-$this = $conexion->query("SELECT * FROM users");
+$this->$conexion->query("SELECT * FROM users");
 ?>
 <!DOCTYPE html>
 <html lang="en">
