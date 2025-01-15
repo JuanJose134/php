@@ -9,3 +9,6 @@
     </style>
     para enviar solo un valor se usa un metodo get y que sea un hipervinculo 
     y para enviar mas de un valor se usa el metodo post y un formulario
+    M odelo
+    V ista
+    C ontrolador ->el controlador hace el proceso de recibir y decidir donde se enviara cada informacion que recibe

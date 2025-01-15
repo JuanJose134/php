@@ -11,6 +11,9 @@ $listado_productos = $conexion->query("SELECT * FROM products");
     <title>Document</title>
 </head>
 <body>
+    <form action="get">
+        
+    </form>
     <a href="Create.php">REGISTRAR PRODUCTO</a><br><br>
     <table border="1">
         <thead>
