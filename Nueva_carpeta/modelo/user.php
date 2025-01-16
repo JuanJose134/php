@@ -1,17 +1,17 @@
 <?php
-require_once "../db/conexion.php";
-class Users extends Db
+require_once "../Config/conexion.php";//se usa tambien para heredar la clase y incluir los dos se usan sin uno no funciona el otro
+class User extends Db //se usa para heredar una clase que se encuentra en otro archivo diferente
 {
-    function index()
+    function index() //Consulta todos los Registros de la Base de Datos
     {
         $sql ="SELECT * FROM users";
         $consulta = $this->conexion->query($sql)->fetch_object();
         return $consulta;
-        //var_dump($consulta);muestra los valores 
+        //var_dump($consulta);muestra los valores como estan el en objeto o registro
     }
-    function store()
+    function store($name,$phone,$email)
     {
-        $sql="INSERT INTO users Values (null,'juan','1029384756','juan@gmail.com')";
+        $sql="INSERT INTO users Values (null,'$name','phone','email')";
         $this->conexion ->query($sql);
         if ($sql)
         {
@@ -19,23 +19,27 @@ class Users extends Db
         }
         else
         {
-            echo"Hubo un error en la sentencia";
+            echo"Hubo un error en la sentencia o el registro esta duplicado";
         }
-
     }
     function delete()
     {
-        
+        $sql ="";
+        $delete = $this->conexion->query($sql);
+        return $delete;
     }
     function update()
     {
-        
+        $sql ="";
+        $update = $this->conexion->query($sql);
+        return $update;
     }
-    function searByName()
+    function searByName() //
     {
 
     }
 }
-$object = new Users();
+/*$object = new User();
 $listUsers =$object ->index();
-//$object->store();
+echo $listUsers->Name.'<br>'.$listUsers->Phone.'<br> '.$listUsers->Email;
+$object->store();*/
